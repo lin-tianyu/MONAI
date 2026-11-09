@@ -42,6 +42,7 @@ from monai.data.image_reader import (
     get_preferred_dicom_reader_key,
 )
 from monai.data.meta_tensor import MetaTensor
+from monai.data.mlarray_reader import MLArrayReader
 from monai.data.utils import is_no_channel
 from monai.transforms.transform import Transform
 from monai.transforms.utility.array import EnsureChannelFirst
@@ -75,6 +76,7 @@ SUPPORTED_READERS = {
     "numpyreader": NumpyReader,
     "pilreader": PILReader,
     "nibabelreader": NibabelReader,
+    "mlarrayreader": MLArrayReader,
 }
 
 

@@ -81,6 +81,7 @@ from .itk_torch_bridge import (
 )
 from .meta_obj import MetaObj, get_track_meta, set_track_meta
 from .meta_tensor import MetaTensor, get_spatial_ndim
+from .mlarray_reader import MLArrayReader
 from .samplers import DistributedSampler, DistributedWeightedRandomSampler
 from .synthetic import create_test_image_2d, create_test_image_3d
 from .test_time_augmentation import TestTimeAugmentation

@@ -346,3 +346,12 @@ cd MONAI/
 conda create -n <name> python=<ver>  # eg 3.10
 conda env update -n <name> -f environment-dev.yml
 ```
+
+### MLArray images
+
+Install `pip install 'monai[mlarray]'` for MLArray v1 `.mla` images.
+This optional extra requires NumPy 2. Use `LoadImage(reader="MLArrayReader")`
+or extension-based automatic selection. Three spatial axes, anatomical geometry,
+and an optional declared channel axis are supported. Loading materializes the
+full volume; random patch I/O requires slicing the MLArray before tensor conversion.
+Files produced by pre-v1 MLArray must be converted again from their source images.

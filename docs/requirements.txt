@@ -43,3 +43,5 @@ huggingface_hub
 pyamg>=5.0.0, <5.3.0
 packaging
 polygraphy
+
+mlarray>=1.0.0,<2

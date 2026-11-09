@@ -149,6 +149,11 @@ NibabelReader
 .. autoclass:: NibabelReader
   :members:
 
+MLArrayReader
+~~~~~~~~~~~~~
+.. autoclass:: MLArrayReader
+  :members:
+
 NumpyReader
 ~~~~~~~~~~~
 .. autoclass:: NumpyReader

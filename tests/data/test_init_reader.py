@@ -43,6 +43,7 @@ class TestInitLoadImage(unittest.TestCase):
 
         optional_readers = {
             "NibabelReader": "nibabel",
+            "MLArrayReader": "mlarray",
             "PILReader": "PIL",
             "ITKReader": "itk",
             "NrrdReader": "nrrd",
@@ -50,7 +51,11 @@ class TestInitLoadImage(unittest.TestCase):
         }
         for r, module in optional_readers.items():
             with self.subTest(reader=r):
-                _, has_module = optional_import(module, allow_namespace_pkg=module in ("itk", "nrrd"))
+                _, has_module = optional_import(
+                    module,
+                    version="1.0.0" if module == "mlarray" else "",
+                    allow_namespace_pkg=module in ("itk", "nrrd"),
+                )
                 if has_module:
                     inst = LoadImaged("image", reader=r)
                     self.assertIsInstance(inst, LoadImaged)
